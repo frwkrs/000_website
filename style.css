@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "neue-Metana";
+  /* src: url(/assets/NeueMetana-Regular.otf) format("otf"); */
+  src: url('assets/NeueMetana-Regular.otf') format("opentype");
+  src: url('assets/neuemetana-regular-webfont.woff2') format("woff2");
+ 
+}
+
+
+:root {
+  --text-shadow-value: 0 0 5px rgba(213, 255, 171, 0.1), 
+                      0 0 10px rgba(213, 255, 171, 0.1),  
+                      0 0 15px rgba(213, 255, 171, 0.1),  
+                      0 0 20px rgba(213, 255, 171, 0.1);
+  --text-color: #d1ffbc;
+  --background-color: #f7b7ea;
+}
+
+
+body {
+  /* padding: 20px; */
+  font-family: 'neue-Metana';
+  /* background-color: (240, 248, 255); */
+
+  /* color: blue; */
+  color: var(--text-color);
+  /* height: 100%;
+  width: 100%; */
+  max-width: 100sw;
+  max-height: 100svh;
+  overflow: hidden;
+  background-blend-mode: exclusion;
+  /* background-size: 100%; */
+  background-repeat: no-repeat;
+}
+
+#pic {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -9999;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-image: url('roses.png');
+}
+
+#img {
+  z-index: -9999;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  /* background-image: url('background1.png'); */
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  /* mix-blend-mode: multiply; */
+  mix-blend-mode: color-burn;
+  opacity: .3;
+  background-size: 100%;
+}
+
+a {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow';
+  position: absolute;
+  color: var(--text-color);
+  left: 0;
+  top: 0;
+  width: fit-content;
+  border-radius: 30px;
+  padding: 0 10px;
+  border: 2px solid var(--text-color);
+  background-color: var(--background-color);
+  text-decoration: none;
+  box-shadow: 0 0 0 0 rgba(var(--text-color), 0.5);
+  animation: pulse-black 1.5s infinite;  
+  font-size: 40px;
+  transition: left 0.5s, top 0.5s;
+}
+
+a:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+a:nth-child(1) {
+  font-size: 7pt;
+  color: var(--text-color);
+  background: none;
+  border: none;
+  right: -15px;
+  bottom: 30px;
+  left: auto;
+  top: auto;
+  animation: none;
+  transform: rotate(-90deg);
+
+}
+
+a:nth-child(2) {
+  z-index: -900;
+}
+
+@keyframes pulse-black {
+	0% {
+		transform: scale(0.99);
+		box-shadow: 0 0 0 0 rgba(var(--text-color), 0.5);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 94, 255, 0);
+	}
+	
+	100% {
+		transform: scale(0.99);
+		box-shadow: 0 0 0 0 rgba(0, 94, 255, 0);
+	}
+}
+
+p {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 'regular';
+  margin: 0;
+  font-size: 40px;
+  position: absolute;
+  /* transition: left 0.5s, top 0.5s; */
+  /* -webkit-text-stroke: 1px white; */
+  
+  /* text-shadow: var(--text-shadow-value); */
+  /* background-color: aliceblue; */
+}
+
+
+
+h1 {
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: 'neue-Metana';
+  /* width: fit-content; */
+  font-size: 120px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  line-height: 100px;
+  /* text-shadow: var(--text-shadow-value); */
+}
+
+h2 {
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-weight: 100;
+  margin: 0;
+  /* padding: 0 100px; */
+  /* text-indent: 5%; */
+  font-size: 60px;
+  text-shadow: var(--text-shadow-value);
+  
+  
+}
+#telegram {
+  position: absolute;
+  top: auto;
+  height: 50px;
+  left: 8px;
+  bottom: 5px;
+  font-size: 20px;
+  animation: none;
+}
+#draggable {
+  color: var(--text-color);
+  /* padding-top: 50vh; */
+  position: absolute;
+  width: 50%;
+  top: 50vw;
+  left: 20%;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  z-index: -999;
+}
+
+.clone {
+  position: absolute;
+}
+
+#img {
+  /* display: none; */
+  max-width: 100%;
+  width: 100%;
+
+  filter: invert(100%);
+}
+
+@media (max-width: 900px) {
+  body {
+    margin: 0;
+    width: 100svw;
+    height: 100svh !important;
+    overflow: hidden !important;
+    /* padding: 5px; */
+    /* margin: 0; */
+    /* height: 100svw; */
+  }
+  h1 {
+    /* padding-left: 5px; */
+    font-size: 15vw;
+    line-height: 15vw;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  #img {
+    max-width: 100%;
+  }
+
+  #draggable {
+    left: 0%;
+    width: 80vw;
+  }
+
+
+  #img {
+    background-size: cover;
+  }
+
+  p {
+    position: relative;
+    font-size: 40px;
+  }
+
+  
+  a {
+    font-size: 4vw;
+    text-align: center;
+  }
+}
