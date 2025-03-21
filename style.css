@@ -20,10 +20,12 @@
 body {
   font-family: 'neue-Metana';
   color: var(--text-color);
+
   max-width: 100sw;
   max-height: 100svh;
   overflow: hidden;
   background-blend-mode: exclusion;
+
   background-repeat: no-repeat;
 }
 
