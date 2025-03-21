@@ -20,6 +20,7 @@
 body {
   font-family: 'neue-Metana';
   color: var(--text-color);
+  background-color: var(--background-color);
 
   max-width: 100sw;
   max-height: 100svh;
@@ -221,7 +222,8 @@ h2 {
 
   p {
     position: relative;
-    font-size: 40px;
+    font-size: 30px;
+    padding-left: 5px;
   }
 
   

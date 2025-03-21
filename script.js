@@ -92,11 +92,11 @@ window.onload = function () {
   ];
 
   // Randomly select a pastel color
-  var randomColor =
-    pastelColors[Math.floor(Math.random() * pastelColors.length)];
+  // var randomColor =
+  //   pastelColors[Math.floor(Math.random() * pastelColors.length)];
 
   // Apply the color to the body background
-  document.body.style.backgroundColor = randomColor;
+  // document.body.style.backgroundColor = randomColor;
   var backgrounds = [
     "background2.png",
     "background3.png",
