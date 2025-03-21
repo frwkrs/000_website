@@ -123,6 +123,22 @@ if (!isMobileDevice()) {
   document.addEventListener("mousemove", resetTimer);
 }
 
+function toggleImpressum() {
+  const impressum = document.getElementById("imprint");
+  if (impressum.style.display === "" || impressum.style.display === "none") {
+    impressum.style.display = "block";
+  } else {
+    impressum.style.display = "none";
+  }
+  const draggable = document.getElementById("draggable");
+  draggable.style.display = draggable.style.display === "none" ? "block" : "none";
+  const firstAElement = document.querySelector("a:nth-of-type(1)");
+  const secondAElement = document.querySelector("a:nth-of-type(2)");
+
+  firstAElement.style.display = firstAElement.style.display === "none" ? "block" : "none";
+  secondAElement.style.display = secondAElement.style.display === "none" ? "block" : "none";
+}
+
 function changeBackgroundAndColor() {
   const pastelColors = [
     "#f7b7ea"
