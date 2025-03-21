@@ -18,19 +18,12 @@
 
 
 body {
-  /* padding: 20px; */
   font-family: 'neue-Metana';
-  /* background-color: (240, 248, 255); */
-
-  /* color: blue; */
   color: var(--text-color);
-  /* height: 100%;
-  width: 100%; */
   max-width: 100sw;
   max-height: 100svh;
   overflow: hidden;
   background-blend-mode: exclusion;
-  /* background-size: 100%; */
   background-repeat: no-repeat;
 }
 
